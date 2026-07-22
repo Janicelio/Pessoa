@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD - Pessoas</title>
+
+    <!-- Importar CSS do Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+</head>
+<body>
+    <!-- Container -->
+    <div class="container my-5">
+        <h2>CRUD - Gerenciar Pessoas</h2>
+    
+        <!-- Formulário de cadastro -->
+        <form id="formPessoa">
+            <div class="mb-3" hidden>
+                <label for="codigo" class="form-label">Código</label>
+                <input type="text" class="form-control" id="codigo" readonly>
+            </div>
+            <div class="mb-3">
+                <label for="nome" class="form-label">Nome</label>
+                <input type="text" class="form-control" id="nome" required>
+            </div>
+            <div class="mb-3">
+                <label for="idade" class="form-label">Idade</label>
+                <input type="number" class="form-control" id="idade" required>
+            </div>
+            <div class="mb-3">
+                <label for="cidade" class="form-label">Cidade</label>
+                <input type="text" class="form-control" id="cidade" required>
+            </div>
+            <button type="submit" class="btn btn-primary" id="btnSubmit">Salvar</button>
+        </form>
+    
+        <hr>
+    
+        <!-- Tabela de dados -->
+        <h3>Lista de Pessoas</h3>
+        <table class="table table-bordered" id="tabelaPessoas">
+            <thead>
+                <tr>
+                    <th>Código</th>
+                    <th>Nome</th>
+                    <th>Idade</th>
+                    <th>Cidade</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Os dados serão inseridos aqui -->
+            </tbody>
+        </table>
+    </div>
+    
+    <!-- Importar JS do Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    
+    <!-- Importar script -->
+    <script src="script.js"></script>
+</body>
+</html>
